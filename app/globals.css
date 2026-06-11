@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Le fond clair est un gris très doux (slate-50). 'antialiased' rend la police plus fine et lisse */
+  @apply bg-slate-50 text-slate-900 antialiased selection:bg-indigo-500/20 selection:text-indigo-900;
+  
+  /* Ajout de gradients radiaux subtils aux coins de l'écran */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.08) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+html.dark body {
+  /* En mode sombre, le fond est presque noir (zinc-950) et le texte gris clair */
+  @apply bg-zinc-950 text-zinc-100 selection:bg-indigo-500/30 selection:text-indigo-200;
+  
+  /* Lumière d'ambiance sombre : bleu nuit et indigo profond */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(30, 27, 75, 0.4) 0px, transparent 60%),
+    radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.4) 0px, transparent 60%);
+}
+/* Forme hexagonale pour les badges de compétences */
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hexagon:hover {
+  transform: scale(1.12);
+}
