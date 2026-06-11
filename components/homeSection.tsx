@@ -18,7 +18,7 @@ export default function HomeSection() {
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
           Bonjour, je suis{" "}
           <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-600 dark:from-indigo-400 dark:via-purple-300 dark:to-pink-400 bg-clip-text text-transparent">
-            Kevin,
+            Bruno Kevin,
           </span>{" "}
         </h1>
 
